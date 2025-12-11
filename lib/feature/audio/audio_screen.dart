@@ -38,7 +38,10 @@ class _AudioScreenState extends State<AudioScreen> {
       appBar: AppBar(
         backgroundColor: AppColor.maincolor,
         centerTitle: true,
-        leading: Icon(Icons.arrow_back_ios,color: AppColor.white,),
+        leading: IconButton(onPressed: () {  
+          Navigator.pop(context);
+        }, 
+        icon: Icon(Icons.arrow_back_ios,color: AppColor.white,)),
         title: Row(spacing: 5,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
